@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/pete75ru/laravel/resources/views
     - /bin/cp index.html $DEPLOYPATH/spa.blade.php
+    - /bin/rm -f index.html
