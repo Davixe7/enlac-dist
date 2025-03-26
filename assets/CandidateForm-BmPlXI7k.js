@@ -1,18 +1,18 @@
-import { u as useFileFormDomProps, Q as QInput, a as QCheckbox } from "./QCheckbox-zqFzncTP.js";
-import { Q as QRadio } from "./QRadio-C9k838wv.js";
-import { r as humanStorageSize, t as QChip, i as QSelect, n as QDialog } from "./QList-vfoOGRjD.js";
-import { g as getCurrentInstance, r as ref, q as computed, ag as stop, s as stopAndPrevent, a1 as client, h, c as createComponent, ae as injectProp, af as prevent, d as hSlot, z as watch, e as createElementBlock, i as openBlock, j as createBaseVNode, m as createTextVNode, U as createBlock, aj as createCommentVNode, w as withCtx, k as createVNode, C as QIcon, A as withDirectives, B as vShow, Q as QBtn, Y as Fragment, _ as defineStore, b as onMounted, R as reactive, Z as renderList, a9 as toDisplayString, ah as Notify, n as nextTick } from "./index-CZkFWdkm.js";
-import { f as useFieldEmits, c as useFormProps, g as useNonInputFieldProps, h as useFieldState, i as useFormInputNameAttr, j as fieldValueIsFilled, k as useField } from "./use-key-composition-D21ScK9P.js";
-import { Q as QPage } from "./QPage-BswmJoxf.js";
-import { api } from "./axios-8Xgxg1Su.js";
+import { u as useFileFormDomProps, Q as QInput, a as QCheckbox } from "./QCheckbox-IpF3v89G.js";
+import { Q as QRadio } from "./QRadio-USJqshDE.js";
+import { r as humanStorageSize, t as QChip, i as QSelect, n as QDialog } from "./QList-CZRjyixm.js";
+import { g as getCurrentInstance, r as ref, q as computed, ag as stop, s as stopAndPrevent, a1 as client, h, c as createComponent, ae as injectProp, af as prevent, d as hSlot, z as watch, e as createElementBlock, i as openBlock, j as createBaseVNode, m as createTextVNode, U as createBlock, aj as createCommentVNode, w as withCtx, k as createVNode, C as QIcon, A as withDirectives, B as vShow, Q as QBtn, Y as Fragment, _ as defineStore, b as onMounted, R as reactive, Z as renderList, a9 as toDisplayString, ah as Notify, n as nextTick } from "./index-DFLanZ1z.js";
+import { f as useFieldEmits, c as useFormProps, g as useNonInputFieldProps, h as useFieldState, i as useFormInputNameAttr, j as fieldValueIsFilled, k as useField } from "./use-key-composition-B7KFeawS.js";
+import { Q as QPage } from "./QPage-hAE_yv6U.js";
+import { api } from "./axios-CONCEpaH.js";
 import { D as DateTime } from "./datetime-Dvln09A7.js";
-import { a as QTd, Q as QTable } from "./QTable-BStGU22a.js";
-import { Q as QCard, a as QCardSection } from "./QCard-DIGRXogV.js";
-import { u as useDarkProps, a as useDark } from "./use-dark-CEqs_S-x.js";
-import { Q as QTr } from "./QTr-D5oHbfD9.js";
+import { a as QTd, Q as QTable } from "./QTable-DR7K-ZY-.js";
+import { Q as QCard, a as QCardSection } from "./QCard-Dam2NgCA.js";
+import { u as useDarkProps, a as useDark } from "./use-dark-CgBzdHOB.js";
+import { Q as QTr } from "./QTr-BFO1DP6e.js";
 import { s as scrollToFirstError } from "./focusError-DHV7BPiX.js";
-import "./selection-E0CMqir6.js";
-import "./QSeparator-BN1tKhAq.js";
+import "./selection-LH5GgUwm.js";
+import "./QSeparator-BrS_xjnn.js";
 function filterFiles(files, rejectedFiles, failedPropValidation, filterFn) {
   const acceptedFiles = [];
   files.forEach((file) => {
@@ -511,6 +511,7 @@ const _sfc_main$3 = {
               label: "Nombre (s)",
               modelValue: contact.value.first_name,
               "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => contact.value.first_name = $event),
+              class: "q-field--required",
               error: !!localErrors.value[`first_name`],
               "error-message": localErrors.value[`first_name`]
             }, null, 8, ["modelValue", "error", "error-message"]),
@@ -541,6 +542,7 @@ const _sfc_main$3 = {
               label: "Parentesco",
               modelValue: contact.value.relationship,
               "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => contact.value.relationship = $event),
+              class: "q-field--required",
               error: !!localErrors.value[`relationship`],
               "error-message": localErrors.value[`relationship`],
               options: relationships
@@ -1291,6 +1293,7 @@ const _sfc_main = {
                   label: "Nombre (s)",
                   modelValue: candidate.value.first_name,
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => candidate.value.first_name = $event),
+                  class: "q-field--required",
                   error: !!errors.value["candidate.first_name"],
                   "error-message": errors.value["candidate.first_name"]
                 }, null, 8, ["modelValue", "error", "error-message"]),
@@ -1301,6 +1304,7 @@ const _sfc_main = {
                   label: "Apellido Materno",
                   modelValue: candidate.value.middle_name,
                   "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => candidate.value.middle_name = $event),
+                  class: "q-field--required",
                   error: !!errors.value["candidate.middle_name"],
                   "error-message": errors.value["candidate.middle_name"]
                 }, null, 8, ["modelValue", "error", "error-message"]),
@@ -1311,6 +1315,7 @@ const _sfc_main = {
                   label: "Apellido Paterno",
                   modelValue: candidate.value.last_name,
                   "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => candidate.value.last_name = $event),
+                  class: "q-field--required",
                   error: !!errors.value["candidate.last_name"],
                   "error-message": errors.value["candidate.last_name"]
                 }, null, 8, ["modelValue", "error", "error-message"])
@@ -1323,6 +1328,7 @@ const _sfc_main = {
                   label: "Fecha de Nacimiento",
                   modelValue: candidate.value.birth_date,
                   "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => candidate.value.birth_date = $event),
+                  class: "q-field--required",
                   error: !!errors.value["candidate.birth_date"],
                   "error-message": errors.value["candidate.birth_date"],
                   type: "date"

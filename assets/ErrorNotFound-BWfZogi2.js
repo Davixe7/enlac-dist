@@ -1,4 +1,4 @@
-import { e as createElementBlock, i as openBlock, j as createBaseVNode, k as createVNode, Q as QBtn } from "./index-CZkFWdkm.js";
+import { e as createElementBlock, i as openBlock, j as createBaseVNode, k as createVNode, Q as QBtn } from "./index-DFLanZ1z.js";
 const _hoisted_1 = { class: "fullscreen bg-blue text-white text-center q-pa-md flex flex-center" };
 const _sfc_main = {
   __name: "ErrorNotFound",

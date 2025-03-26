@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/LoginPage-BKVSR_9K.js","assets/QCheckbox-zqFzncTP.js","assets/use-key-composition-D21ScK9P.js","assets/use-dark-CEqs_S-x.js","assets/user-store-ByXvh9Ro.js","assets/axios-8Xgxg1Su.js","assets/LoginPage-CUSd6V_W.css","assets/MainLayout-DqIs1grQ.js","assets/QImg-BplBbyCO.js","assets/selection-E0CMqir6.js","assets/QList-vfoOGRjD.js","assets/QSeparator-BN1tKhAq.js","assets/ClosePopup-D-CK-aFv.js","assets/MainLayout-BdbUYrfg.css","assets/IndexPage-ChUmGTVZ.js","assets/use-render-cache-BA_W40LL.js","assets/QPage-BswmJoxf.js","assets/QCard-DIGRXogV.js","assets/IndexPage-BL__cdWh.css","assets/CandidatosPage-D5p2CojC.js","assets/QTable-BStGU22a.js","assets/datetime-Dvln09A7.js","assets/_plugin-vue_export-helper-1tPrXgE0.js","assets/CandidatosPage-Cqfm_SLn.css","assets/CandidateReports-CTEDDTNl.js","assets/QTr-D5oHbfD9.js","assets/CandidateReports-a5iVC2qw.css","assets/CandidateForm-B3EQ-Mdt.js","assets/QRadio-C9k838wv.js","assets/focusError-DHV7BPiX.js","assets/CandidateForm-DC_b2FtK.css","assets/EvaluationForm-BxVjo-Wq.js","assets/CandidateProfile-CAO-vbN0.js","assets/EvaluationForm-G9QyOVIv.css","assets/InterviewForm-D0CBxawD.js","assets/InterviewForm-DnjOWBuZ.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/LoginPage-DebS_Khr.js","assets/QCheckbox-IpF3v89G.js","assets/use-key-composition-B7KFeawS.js","assets/use-dark-CgBzdHOB.js","assets/user-store-CkzAzvl3.js","assets/axios-CONCEpaH.js","assets/LoginPage-CUSd6V_W.css","assets/MainLayout-BXYHi3op.js","assets/QImg-DcCHZXx5.js","assets/selection-LH5GgUwm.js","assets/QList-CZRjyixm.js","assets/QSeparator-BrS_xjnn.js","assets/ClosePopup-C0nn4r2b.js","assets/MainLayout-BdbUYrfg.css","assets/IndexPage-BsRTmXnn.js","assets/use-render-cache-BA_W40LL.js","assets/QPage-hAE_yv6U.js","assets/QCard-Dam2NgCA.js","assets/IndexPage-BL__cdWh.css","assets/CandidatosPage-Kl4w6UdB.js","assets/QTable-DR7K-ZY-.js","assets/datetime-Dvln09A7.js","assets/_plugin-vue_export-helper-1tPrXgE0.js","assets/CandidatosPage-aMrInrpW.css","assets/CandidateReports-CCejVaqD.js","assets/QTr-BFO1DP6e.js","assets/CandidateReports-a5iVC2qw.css","assets/CandidateForm-BmPlXI7k.js","assets/QRadio-USJqshDE.js","assets/focusError-DHV7BPiX.js","assets/CandidateForm-DC_b2FtK.css","assets/EvaluationForm-931qg7fE.js","assets/CandidateProfile-fBx2jGsk.js","assets/EvaluationForm-G9QyOVIv.css","assets/InterviewForm-zlnEmTqd.js","assets/InterviewForm-DnjOWBuZ.css"])))=>i.map(i=>d[i]);
 const scriptRel = /* @__PURE__ */ function detectScriptRel() {
   const relList = typeof document !== "undefined" && document.createElement("link").relList;
   return relList && relList.supports && relList.supports("modulepreload") ? "modulepreload" : "preload";
@@ -11030,49 +11030,49 @@ const routes = [
   {
     path: "/login",
     meta: { label: "Candidatos y Evaluaciones" },
-    component: () => __vitePreload(() => import("./LoginPage-BKVSR_9K.js"), true ? __vite__mapDeps([0,1,2,3,4,5,6]) : void 0)
+    component: () => __vitePreload(() => import("./LoginPage-DebS_Khr.js"), true ? __vite__mapDeps([0,1,2,3,4,5,6]) : void 0)
   },
   {
     path: "/",
     meta: { label: "Home", icon: "home" },
-    component: () => __vitePreload(() => import("./MainLayout-DqIs1grQ.js"), true ? __vite__mapDeps([7,8,9,10,2,3,11,12,4,5,13]) : void 0),
+    component: () => __vitePreload(() => import("./MainLayout-BXYHi3op.js"), true ? __vite__mapDeps([7,8,9,10,2,3,11,12,4,5,13]) : void 0),
     children: [
       {
         path: "/home",
         meta: { label: "" },
-        component: () => __vitePreload(() => import("./IndexPage-ChUmGTVZ.js"), true ? __vite__mapDeps([14,15,9,3,16,8,17,18]) : void 0)
+        component: () => __vitePreload(() => import("./IndexPage-BsRTmXnn.js"), true ? __vite__mapDeps([14,15,9,3,16,8,17,18]) : void 0)
       },
       {
         path: "/candidatos",
         meta: { label: "Candidatos y Evaluaciones" },
-        component: () => __vitePreload(() => import("./CandidatosPage-D5p2CojC.js"), true ? __vite__mapDeps([19,20,11,3,10,2,9,1,16,5,17,15,12,21,22,23]) : void 0),
+        component: () => __vitePreload(() => import("./CandidatosPage-Kl4w6UdB.js"), true ? __vite__mapDeps([19,20,11,3,10,2,9,1,16,5,17,15,12,21,22,23]) : void 0),
         children: [
           {
             path: "reportes",
             meta: { label: "Reportes de candidatos", layout: "main" },
-            component: () => __vitePreload(() => import("./CandidateReports-CTEDDTNl.js"), true ? __vite__mapDeps([24,1,2,3,20,11,10,9,16,25,5,26]) : void 0)
+            component: () => __vitePreload(() => import("./CandidateReports-CCejVaqD.js"), true ? __vite__mapDeps([24,1,2,3,20,11,10,9,16,25,5,26]) : void 0)
           },
           {
             path: "registrar",
             meta: { label: "Nuevo Candidato", layout: "main" },
-            component: () => __vitePreload(() => import("./CandidateForm-B3EQ-Mdt.js"), true ? __vite__mapDeps([27,1,2,3,28,10,9,16,5,21,20,11,17,25,29,30]) : void 0)
+            component: () => __vitePreload(() => import("./CandidateForm-BmPlXI7k.js"), true ? __vite__mapDeps([27,1,2,3,28,10,9,16,5,21,20,11,17,25,29,30]) : void 0)
           },
           {
             path: ":candidateId/editar",
             meta: { label: "Editar Candidato", layout: "main" },
-            component: () => __vitePreload(() => import("./CandidateForm-B3EQ-Mdt.js"), true ? __vite__mapDeps([27,1,2,3,28,10,9,16,5,21,20,11,17,25,29,30]) : void 0),
+            component: () => __vitePreload(() => import("./CandidateForm-BmPlXI7k.js"), true ? __vite__mapDeps([27,1,2,3,28,10,9,16,5,21,20,11,17,25,29,30]) : void 0),
             props: true
           },
           {
             path: ":candidateId/evaluar",
             meta: { label: "Evaluacion", layout: "main" },
-            component: () => __vitePreload(() => import("./EvaluationForm-BxVjo-Wq.js"), true ? __vite__mapDeps([31,20,11,3,10,2,9,1,16,5,17,28,32,8,22,33]) : void 0),
+            component: () => __vitePreload(() => import("./EvaluationForm-931qg7fE.js"), true ? __vite__mapDeps([31,20,11,3,10,2,9,1,16,5,17,28,32,8,22,33]) : void 0),
             props: true
           },
           {
             path: ":candidateId/entrevistar",
             meta: { label: "Entrevistar", layout: "main" },
-            component: () => __vitePreload(() => import("./InterviewForm-D0CBxawD.js"), true ? __vite__mapDeps([34,1,2,3,10,9,16,28,32,8,5,29,35]) : void 0),
+            component: () => __vitePreload(() => import("./InterviewForm-zlnEmTqd.js"), true ? __vite__mapDeps([34,1,2,3,10,9,16,28,32,8,5,29,35]) : void 0),
             props: true
           }
         ]
@@ -11083,7 +11083,7 @@ const routes = [
   // but you can also remove it
   {
     path: "/:catchAll(.*)*",
-    component: () => __vitePreload(() => import("./ErrorNotFound-h0B2unSQ.js"), true ? [] : void 0)
+    component: () => __vitePreload(() => import("./ErrorNotFound-BWfZogi2.js"), true ? [] : void 0)
   }
 ];
 const createRouter = defineRouter(function() {
@@ -12679,7 +12679,7 @@ createQuasarApp(createApp, quasarUserOptions).then((app) => {
     (bootFiles) => bootFiles.map((entry) => entry.default)
   ];
   return Promise[method]([
-    __vitePreload(() => import("./axios-8Xgxg1Su.js"), true ? [] : void 0)
+    __vitePreload(() => import("./axios-CONCEpaH.js"), true ? [] : void 0)
   ]).then((bootFiles) => {
     const boot = mapFn(bootFiles).filter((entry) => typeof entry === "function");
     start(app, boot);

@@ -1,18 +1,18 @@
-import { q as computed, ab as Plugin, ac as defaultLang, c as createComponent, g as getCurrentInstance, r as ref, ad as isObject, z as watch, n as nextTick, h, T as Transition, d as hSlot, Q as QBtn, ae as injectProp, $ as createDirective, a0 as cleanEvt, a1 as client, a2 as preventDraggable, E as noop, a3 as addEvt, a4 as position, af as prevent, ag as stop, a5 as leftClick, s as stopAndPrevent, v as vmIsDestroyed, A as withDirectives, b as onMounted, U as createBlock, i as openBlock, w as withCtx, k as createVNode, j as createBaseVNode, m as createTextVNode, C as QIcon, ah as Notify } from "./index-CZkFWdkm.js";
-import { Q as QTable, a as QTd } from "./QTable-BStGU22a.js";
-import { p as pad, l as useAnchorProps, m as useAnchor, n as QDialog, j as QMenu, i as QSelect } from "./QList-vfoOGRjD.js";
-import { Q as QPage } from "./QPage-BswmJoxf.js";
-import { api } from "./axios-8Xgxg1Su.js";
-import { a as QCardSection, Q as QCard } from "./QCard-DIGRXogV.js";
-import { u as useDarkProps, a as useDark } from "./use-dark-CEqs_S-x.js";
+import { q as computed, ab as Plugin, ac as defaultLang, c as createComponent, g as getCurrentInstance, r as ref, ad as isObject, z as watch, n as nextTick, h, T as Transition, d as hSlot, Q as QBtn, ae as injectProp, $ as createDirective, a0 as cleanEvt, a1 as client, a2 as preventDraggable, E as noop, a3 as addEvt, a4 as position, af as prevent, ag as stop, a5 as leftClick, s as stopAndPrevent, v as vmIsDestroyed, A as withDirectives, b as onMounted, U as createBlock, i as openBlock, w as withCtx, k as createVNode, j as createBaseVNode, m as createTextVNode, C as QIcon, ah as Notify } from "./index-DFLanZ1z.js";
+import { Q as QTable, a as QTd } from "./QTable-DR7K-ZY-.js";
+import { p as pad, l as useAnchorProps, m as useAnchor, n as QDialog, j as QMenu, i as QSelect } from "./QList-CZRjyixm.js";
+import { Q as QPage } from "./QPage-hAE_yv6U.js";
+import { api } from "./axios-CONCEpaH.js";
+import { a as QCardSection, Q as QCard } from "./QCard-Dam2NgCA.js";
+import { u as useDarkProps, a as useDark } from "./use-dark-CgBzdHOB.js";
 import { u as useRenderCache, g as getModifierDirections, s as shouldStart } from "./use-render-cache-BA_W40LL.js";
-import { c as useFormProps, d as useFormAttrs, e as useFormInject } from "./use-key-composition-D21ScK9P.js";
-import { Q as QInput } from "./QCheckbox-zqFzncTP.js";
-import { c as clearSelection } from "./selection-E0CMqir6.js";
-import { C as ClosePopup } from "./ClosePopup-D-CK-aFv.js";
+import { c as useFormProps, d as useFormAttrs, e as useFormInject } from "./use-key-composition-B7KFeawS.js";
+import { Q as QInput } from "./QCheckbox-IpF3v89G.js";
+import { c as clearSelection } from "./selection-LH5GgUwm.js";
+import { C as ClosePopup } from "./ClosePopup-C0nn4r2b.js";
 import { D as DateTime } from "./datetime-Dvln09A7.js";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper-1tPrXgE0.js";
-import "./QSeparator-BN1tKhAq.js";
+import "./QSeparator-BrS_xjnn.js";
 const breaks = [
   -61,
   9,
@@ -2910,6 +2910,7 @@ const _sfc_main$1 = {
               createVNode(QSelect, {
                 outlined: "",
                 "stack-label": "",
+                class: "q-field--required",
                 label: "Candidatos",
                 options: __props.candidates,
                 modelValue: appointment.value.candidate_id,
@@ -2923,6 +2924,7 @@ const _sfc_main$1 = {
                 outlined: "",
                 "stack-label": "",
                 label: "Tipo de cita",
+                class: "q-field--required",
                 options: [{ name: "Unico tipo de cita", id: 1 }],
                 modelValue: appointment.value.type_id,
                 "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => appointment.value.type_id = $event),
@@ -2935,6 +2937,7 @@ const _sfc_main$1 = {
                 outlined: "",
                 "stack-label": "",
                 label: "Atendera",
+                class: "q-field--required",
                 options: evaluators.value,
                 modelValue: appointment.value.evaluator_id,
                 "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => appointment.value.evaluator_id = $event),
@@ -2948,6 +2951,7 @@ const _sfc_main$1 = {
                 "stack-label": "",
                 modelValue: date.value,
                 "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => date.value = $event),
+                class: "q-field--required",
                 label: "Seleccione fecha"
               }, {
                 append: withCtx(() => [
@@ -2994,6 +2998,7 @@ const _sfc_main$1 = {
                 "stack-label": "",
                 modelValue: time.value,
                 "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => time.value = $event),
+                class: "q-field--required",
                 label: "Horario"
               }, {
                 append: withCtx(() => [
@@ -3085,7 +3090,7 @@ const _sfc_main = {
   setup(__props) {
     onMounted(() => fetchCandidates());
     async function fetchCandidates() {
-      rows.value = (await api.get("candidates")).data.data;
+      rows.value = (await api.get("candidates/dashboard")).data.data;
     }
     const appointmentDialog = ref(false);
     const rows = ref([]);
@@ -3236,7 +3241,7 @@ const _sfc_main = {
     };
   }
 };
-const CandidatosPage = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-a7a048d8"]]);
+const CandidatosPage = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-93f558a2"]]);
 export {
   CandidatosPage as default
 };

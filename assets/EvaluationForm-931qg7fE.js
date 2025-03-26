@@ -1,18 +1,18 @@
-import { r as ref, b as onMounted, U as createBlock, aj as createCommentVNode, i as openBlock, w as withCtx, k as createVNode, j as createBaseVNode, a9 as toDisplayString, Q as QBtn, e as createElementBlock, ak as normalizeClass, A as withDirectives, B as vShow, m as createTextVNode, ah as Notify, Y as Fragment, Z as renderList, q as computed, z as watch, aa as normalizeStyle } from "./index-CZkFWdkm.js";
-import { Q as QTable, a as QTd } from "./QTable-BStGU22a.js";
-import { Q as QInput } from "./QCheckbox-zqFzncTP.js";
-import { n as QDialog } from "./QList-vfoOGRjD.js";
-import { Q as QPage } from "./QPage-BswmJoxf.js";
-import { api } from "./axios-8Xgxg1Su.js";
-import { a as QCardSection, Q as QCard } from "./QCard-DIGRXogV.js";
-import { Q as QRadio } from "./QRadio-C9k838wv.js";
-import { _ as _sfc_main$3 } from "./CandidateProfile-CAO-vbN0.js";
+import { r as ref, b as onMounted, U as createBlock, aj as createCommentVNode, i as openBlock, w as withCtx, k as createVNode, j as createBaseVNode, a9 as toDisplayString, Q as QBtn, e as createElementBlock, ak as normalizeClass, A as withDirectives, m as createTextVNode, B as vShow, ah as Notify, Y as Fragment, Z as renderList, q as computed, z as watch, aa as normalizeStyle } from "./index-DFLanZ1z.js";
+import { Q as QTable, a as QTd } from "./QTable-DR7K-ZY-.js";
+import { Q as QInput } from "./QCheckbox-IpF3v89G.js";
+import { n as QDialog } from "./QList-CZRjyixm.js";
+import { Q as QPage } from "./QPage-hAE_yv6U.js";
+import { api } from "./axios-CONCEpaH.js";
+import { a as QCardSection, Q as QCard } from "./QCard-Dam2NgCA.js";
+import { Q as QRadio } from "./QRadio-USJqshDE.js";
+import { _ as _sfc_main$3 } from "./CandidateProfile-fBx2jGsk.js";
 import { _ as _export_sfc } from "./_plugin-vue_export-helper-1tPrXgE0.js";
-import "./QSeparator-BN1tKhAq.js";
-import "./use-dark-CEqs_S-x.js";
-import "./use-key-composition-D21ScK9P.js";
-import "./selection-E0CMqir6.js";
-import "./QImg-BplBbyCO.js";
+import "./QSeparator-BrS_xjnn.js";
+import "./use-dark-CgBzdHOB.js";
+import "./use-key-composition-B7KFeawS.js";
+import "./selection-LH5GgUwm.js";
+import "./QImg-DcCHZXx5.js";
 const _hoisted_1$2 = { class: "page-title page-title--no-margin" };
 const _hoisted_2$2 = { class: "flex justify-between q-mb-lg" };
 const _hoisted_3$1 = {
@@ -103,7 +103,11 @@ const _sfc_main$2 = {
                 _cache[8] || (_cache[8] = createBaseVNode("label", {
                   for: "#",
                   style: { "margin-bottom": "14px", "display": "block" }
-                }, "¿Impacto en Lateridad? (*)", -1)),
+                }, [
+                  createTextVNode("¿Impacto en Lateridad? ("),
+                  createBaseVNode("span", { class: "text--negative" }, "*"),
+                  createTextVNode(") ")
+                ], -1)),
                 createBaseVNode("div", _hoisted_4$1, [
                   createVNode(QRadio, {
                     modelValue: localRank.value.laterality_impact,

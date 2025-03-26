@@ -11741,6 +11741,12 @@ body.body--dark {
   margin: 0;
 }
 
+.q-field--required .q-field__label::after {
+  content: "*";
+  color: #dc3545;
+  margin-left: 1px;
+}
+
 .q-field--labeled {
   padding-top: 26px;
 }
