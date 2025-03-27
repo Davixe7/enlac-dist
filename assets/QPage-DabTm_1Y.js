@@ -1,4 +1,4 @@
-import { g as getCurrentInstance, r as ref, ax as vmHasRouter, z as watch, aF as History, al as onBeforeMount, b as onMounted, t as onBeforeUnmount, c as createComponent, G as inject, H as emptyRenderFn, I as layoutKey, P as pageContainerKey, q as computed, h, d as hSlot } from "./index-DFLanZ1z.js";
+import { g as getCurrentInstance, r as ref, ay as vmHasRouter, z as watch, aG as History, am as onBeforeMount, b as onMounted, t as onBeforeUnmount, c as createComponent, G as inject, H as emptyRenderFn, I as layoutKey, P as pageContainerKey, q as computed, h, d as hSlot } from "./index-CAST7tag.js";
 let counter = 0;
 const useFullscreenProps = {
   fullscreen: Boolean,

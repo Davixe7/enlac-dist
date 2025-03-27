@@ -1,18 +1,21 @@
-import { u as useFileFormDomProps, Q as QInput, a as QCheckbox } from "./QCheckbox-IpF3v89G.js";
-import { Q as QRadio } from "./QRadio-USJqshDE.js";
-import { r as humanStorageSize, t as QChip, i as QSelect, n as QDialog } from "./QList-CZRjyixm.js";
-import { g as getCurrentInstance, r as ref, q as computed, ag as stop, s as stopAndPrevent, a1 as client, h, c as createComponent, ae as injectProp, af as prevent, d as hSlot, z as watch, e as createElementBlock, i as openBlock, j as createBaseVNode, m as createTextVNode, U as createBlock, aj as createCommentVNode, w as withCtx, k as createVNode, C as QIcon, A as withDirectives, B as vShow, Q as QBtn, Y as Fragment, _ as defineStore, b as onMounted, R as reactive, Z as renderList, a9 as toDisplayString, ah as Notify, n as nextTick } from "./index-DFLanZ1z.js";
-import { f as useFieldEmits, c as useFormProps, g as useNonInputFieldProps, h as useFieldState, i as useFormInputNameAttr, j as fieldValueIsFilled, k as useField } from "./use-key-composition-B7KFeawS.js";
-import { Q as QPage } from "./QPage-hAE_yv6U.js";
-import { api } from "./axios-CONCEpaH.js";
-import { D as DateTime } from "./datetime-Dvln09A7.js";
-import { a as QTd, Q as QTable } from "./QTable-DR7K-ZY-.js";
-import { Q as QCard, a as QCardSection } from "./QCard-Dam2NgCA.js";
-import { u as useDarkProps, a as useDark } from "./use-dark-CgBzdHOB.js";
-import { Q as QTr } from "./QTr-BFO1DP6e.js";
+import { u as useFileFormDomProps, Q as QInput, a as QCheckbox } from "./QCheckbox-BxmFaGde.js";
+import { Q as QRadio } from "./QRadio-CpZLYscZ.js";
+import { m as humanStorageSize, n as QChip, i as QSelect, l as QDialog } from "./QList-B3AEJr1g.js";
+import { g as getCurrentInstance, r as ref, q as computed, ac as stop, s as stopAndPrevent, a1 as client, h, c as createComponent, ad as injectProp, ae as prevent, d as hSlot, z as watch, e as createElementBlock, i as openBlock, j as createBaseVNode, m as createTextVNode, U as createBlock, af as createCommentVNode, w as withCtx, k as createVNode, C as QIcon, A as withDirectives, B as vShow, Q as QBtn, Y as Fragment, _ as defineStore, b as onMounted, R as reactive, ag as useRouter, Z as renderList, a9 as toDisplayString, X as QAvatar, ab as Notify, n as nextTick } from "./index-CAST7tag.js";
+import { D as DateTime, Q as QPopupProxy, a as QDate, b as QTime } from "./datetime-BAv-tvQe.js";
+import { Q as QImg } from "./QImg-BJgnFL-C.js";
+import { c as useFieldEmits, d as useFormProps, e as useNonInputFieldProps, f as useFieldState, g as useFormInputNameAttr, h as fieldValueIsFilled, i as useField } from "./use-key-composition-DRPemRqP.js";
+import { Q as QPage } from "./QPage-DabTm_1Y.js";
+import { C as ClosePopup } from "./ClosePopup-BbIWwuBh.js";
+import { api } from "./axios-9xnSQELn.js";
+import { a as QTd, Q as QTable } from "./QTable-CFr3qnZv.js";
+import { Q as QCard, a as QCardSection } from "./QCard-DNcoOIvY.js";
+import { u as useDarkProps, a as useDark } from "./use-dark-DrYRdNo-.js";
+import { Q as QTr } from "./QTr-DkVXdHjs.js";
 import { s as scrollToFirstError } from "./focusError-DHV7BPiX.js";
-import "./selection-LH5GgUwm.js";
-import "./QSeparator-BrS_xjnn.js";
+import "./selection-B2--Yy0-.js";
+import "./use-render-cache-BA_W40LL.js";
+import "./QSeparator-DdcrkME_.js";
 function filterFiles(files, rejectedFiles, failedPropValidation, filterFn) {
   const acceptedFiles = [];
   files.forEach((file) => {
@@ -437,6 +440,7 @@ const _hoisted_9$1 = { class: "col-12 flex justify-end" };
 const _sfc_main$3 = {
   __name: "ContactForm",
   props: {
+    candidateId: { default: null },
     hideBottomSpace: { type: Boolean, default: false },
     modelValue: { type: Object, required: true },
     errors: { type: Object, required: false, default: () => ({}) }
@@ -447,20 +451,12 @@ const _sfc_main$3 = {
     const props = __props;
     const relationships = [
       { label: "Abuelo(a)", value: "abuelo" },
-      { label: "Cuñado(a)", value: "cunado" },
-      { label: "Esposo(a)", value: "esposo" },
       { label: "Hermano(a)", value: "hermano" },
-      { label: "Hijo(a)", value: "hijo" },
       { label: "Hermanastro(a)", value: "hermanastro" },
       { label: "Madre/Padre", value: "madre_padre" },
-      { label: "Nieto(a)", value: "nieto" },
       { label: "Padrastro/Madrastra", value: "padrastro_madrastra" },
-      { label: "Pareja", value: "pareja" },
       { label: "Primo(a)", value: "primo" },
-      { label: "Sobrino(a)", value: "sobrino" },
-      { label: "Suegro(a)", value: "suegro" },
-      { label: "Tío(a)", value: "tio" },
-      { label: "Yerno/Nuera", value: "yerno_nuera" }
+      { label: "Tío(a)", value: "tio" }
     ];
     const contact = ref({ ...props.modelValue });
     const localErrors = ref({ ...props.errors });
@@ -519,21 +515,21 @@ const _sfc_main$3 = {
               outlined: "",
               "stack-label": "",
               "hide-bottom-space": "",
-              label: "Apellido Materno",
-              modelValue: contact.value.middle_name,
-              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => contact.value.middle_name = $event),
-              error: !!localErrors.value[`middle_name`],
-              "error-message": localErrors.value[`middle_name`]
+              label: "Apellido Paterno",
+              modelValue: contact.value.last_name,
+              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => contact.value.last_name = $event),
+              error: !!localErrors.value[`last_name`],
+              "error-message": localErrors.value[`last_name`]
             }, null, 8, ["modelValue", "error", "error-message"]),
             createVNode(QInput, {
               outlined: "",
               "stack-label": "",
               "hide-bottom-space": "",
-              label: "Apellido Paterno",
-              modelValue: contact.value.last_name,
-              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => contact.value.last_name = $event),
-              error: !!localErrors.value[`last_name`],
-              "error-message": localErrors.value[`last_name`]
+              label: "Apellido Materno",
+              modelValue: contact.value.middle_name,
+              "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => contact.value.middle_name = $event),
+              error: !!localErrors.value[`middle_name`],
+              "error-message": localErrors.value[`middle_name`]
             }, null, 8, ["modelValue", "error", "error-message"]),
             createVNode(QSelect, {
               outlined: "",
@@ -545,7 +541,9 @@ const _sfc_main$3 = {
               class: "q-field--required",
               error: !!localErrors.value[`relationship`],
               "error-message": localErrors.value[`relationship`],
-              options: relationships
+              options: relationships,
+              "emit-value": "",
+              "map-options": ""
             }, null, 8, ["modelValue", "error", "error-message"])
           ]),
           createBaseVNode("div", _hoisted_4$1, [
@@ -564,22 +562,24 @@ const _sfc_main$3 = {
               outlined: "",
               "stack-label": "",
               "hide-bottom-space": "",
-              label: "Whatsapp",
+              label: "WhatsApp",
               modelValue: contact.value.whatsapp,
               "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => contact.value.whatsapp = $event),
               error: !!localErrors.value[`whatsapp`],
               "error-message": localErrors.value[`whatsapp`],
+              mask: "##########",
               type: "tel"
             }, null, 8, ["modelValue", "error", "error-message"]),
             createVNode(QInput, {
               outlined: "",
               "stack-label": "",
               "hide-bottom-space": "",
-              label: "Telefono casa",
+              label: "Teléfono casa",
               modelValue: contact.value.home_phone,
               "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => contact.value.home_phone = $event),
               error: !!localErrors.value[`home_phone`],
               "error-message": localErrors.value[`home_phone`],
+              mask: "##########",
               type: "tel"
             }, null, 8, ["modelValue", "error", "error-message"]),
             createBaseVNode("div", _hoisted_5$1, [
@@ -721,7 +721,7 @@ const _sfc_main$2 = {
   __name: "ContactsPage",
   props: {
     candidateId: {
-      type: [Number, null],
+      type: [Number, String, null],
       required: true,
       default: null,
       nullable: true
@@ -741,6 +741,7 @@ const _sfc_main$2 = {
     onMounted(async () => {
       await fetchContacts();
       contact.value = contacts.value[0];
+      emits("update:modelValue", [...contacts.value]);
     });
     watch(() => props.errors, (newValue) => {
       let errors = {};
@@ -878,11 +879,12 @@ const _sfc_main$2 = {
       return openBlock(), createElementBlock(Fragment, null, [
         contacts.value.length <= 1 && contact.value && !dialog.value ? (openBlock(), createBlock(_sfc_main$3, {
           key: 0,
+          "candidate-id": props.candidateId,
           "model-value": contacts.value[0],
           errors: firstContactErrors.value,
           "onUpdate:modelValue": saveContact,
           "hide-bottom-space": ""
-        }, null, 8, ["model-value", "errors"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+        }, null, 8, ["candidate-id", "model-value", "errors"])) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
           _cache[2] || (_cache[2] = createBaseVNode("div", { class: "page-title" }, "Datos del Contacto", -1)),
           createVNode(QTable, {
             bordered: "",
@@ -922,9 +924,10 @@ const _sfc_main$2 = {
                 createVNode(QCardSection, null, {
                   default: withCtx(() => [
                     createVNode(_sfc_main$3, {
+                      "candidate-id": props.candidateId,
                       "model-value": contact.value,
                       "onUpdate:modelValue": saveContact
-                    }, null, 8, ["model-value"])
+                    }, null, 8, ["candidate-id", "model-value"])
                   ]),
                   _: 1
                 })
@@ -1178,32 +1181,37 @@ const _hoisted_9 = { class: "form-section" };
 const _hoisted_10 = { class: "form-section" };
 const _hoisted_11 = { class: "row q-col-gutter-lg q-mb-md" };
 const _hoisted_12 = { class: "col-12 col-md-4" };
-const _hoisted_13 = { class: "col-12 col-md-4" };
-const _hoisted_14 = { class: "q-pl-md q-mt-none" };
-const _hoisted_15 = { style: { "font-family": "monospace", "margin-right": "1rem" } };
-const _hoisted_16 = { style: { "font-family": "monospace" } };
-const _hoisted_17 = { class: "form-section" };
-const _hoisted_18 = { class: "flex q-gutter-x-md q-mb-lg" };
-const _hoisted_19 = { class: "flex q-gutter-x-md" };
+const _hoisted_13 = { class: "col-12 col-md-2" };
+const _hoisted_14 = { class: "row items-center justify-end" };
+const _hoisted_15 = { class: "col-12 col-md-2" };
+const _hoisted_16 = { class: "row items-center justify-end" };
+const _hoisted_17 = { class: "q-pl-md q-mt-none" };
+const _hoisted_18 = { style: { "font-family": "monospace", "margin-right": "1rem" } };
+const _hoisted_19 = { style: { "font-family": "monospace" } };
 const _hoisted_20 = { class: "form-section" };
-const _hoisted_21 = { class: "row" };
-const _hoisted_22 = { class: "col-12 col-md-4" };
-const _hoisted_23 = { class: "flex justify-end" };
+const _hoisted_21 = { class: "flex q-gutter-x-md q-mb-lg" };
+const _hoisted_22 = { class: "flex q-gutter-x-md" };
+const _hoisted_23 = { class: "form-section" };
+const _hoisted_24 = { class: "row" };
+const _hoisted_25 = { class: "col-12 col-md-4" };
+const _hoisted_26 = { class: "flex justify-end" };
 const _sfc_main = {
   __name: "CandidateForm",
   props: ["candidateId"],
   setup(__props) {
+    const router = useRouter();
     const props = __props;
     onMounted(async () => {
       evaluators.value = (await api.get("evaluators")).data.data;
-      evaluation_schedule.value = { evaluator_id: evaluators.value[0].id, date: DateTime.now().toFormat("yyyy-MM-dd H:mm:s") };
-      if (!props.candidateId) {
-        return;
+      if (props.candidateId) {
+        candidate.value = (await api.get(`candidates/${props.candidateId}`)).data.data;
+        medications.value = candidate.value.medications;
+        evaluation_schedule.value = candidate.value.evaluation_schedule ? candidate.value.evaluation_schedule : evaluation_schedule.value;
+        evaluation_schedules.value = candidate.value.evaluation_schedules ? candidate.value.evaluation_schedules : [];
       }
-      candidate.value = (await api.get(`candidates/${props.candidateId}`)).data.data;
-      medications.value = candidate.value.medications;
-      evaluation_schedule.value = candidate.value.evaluation_schedule ? candidate.value.evaluation_schedule : evaluation_schedule.value;
-      evaluation_schedules.value = candidate.value.evaluation_schedules ? candidate.value.evaluation_schedules : [];
+      let datetime = DateTime.fromFormat(evaluation_schedule.value.date, "yyyy-MM-dd HH:mm:ss");
+      evaluationDate.value = datetime.toFormat("dd/MM/yyyy");
+      evaluationTime.value = datetime.toFormat("HH:mm");
     });
     function loadData() {
       let foreignColumns = ["first_name", "middle_name", "last_name", "birth_date", "info_channel", "diagnosis", "sheet"];
@@ -1216,13 +1224,14 @@ const _sfc_main = {
           formdata.append(`candidate[${attr}]`, candidate.value[attr]);
         }
       });
+      evaluation_schedule.value.date = fulldatetime.value;
       Object.keys(evaluation_schedule.value).forEach((attr) => {
         let value = evaluation_schedule.value[attr] === null ? "" : evaluation_schedule.value[attr];
         formdata.append(`evaluation_schedule[${attr}]`, value);
       });
       contacts.value.forEach((contact, i) => {
         Object.keys(contact).forEach((contactAttr) => {
-          formdata.append(`contacts[${i}][${contactAttr}]`, contacts.value[i][contactAttr]);
+          formdata.append(`contacts[${i}][${contactAttr}]`, contacts.value[i][contactAttr] ? contacts.value[i][contactAttr] : "");
         });
       });
       medications.value.forEach((med, i) => {
@@ -1239,7 +1248,8 @@ const _sfc_main = {
       try {
         let endpoint = candidate.value.id ? `candidates/${candidate.value.id}` : "candidates";
         await api.post(endpoint, loadData());
-        Notify.create({ caption: "Guardado con exito", icon: "sym_o_check_circle", iconColor: "positive" });
+        Notify.create({ caption: "Guardado con exito", icon: "sym_o_check_circle", iconColor: "positive", timeout: 3e3, progress: true });
+        setTimeout(() => router.push("/candidatos"), 3e3);
       } catch (error) {
         errors.value = error.status == 422 ? error.formatted : {};
         Notify.create({ caption: "Por favor, valide la informacion", icon: "sym_o_info", iconColor: "negative" });
@@ -1249,13 +1259,19 @@ const _sfc_main = {
     }
     const loading = ref(false);
     const errors = ref({});
+    const evaluationDate = ref(null);
+    const evaluationTime = ref(null);
+    const fulldatetime = computed(() => {
+      let newDate = DateTime.fromFormat(evaluationDate.value + " " + evaluationTime.value, "dd/MM/yyyy HH:mm");
+      return newDate.toFormat("yyyy-MM-dd HH:mm:ss");
+    });
     const infoChannels = ref(["Publicidad impresa", "Publicidad en radio", "Recomendacion de escuela", "Recomendacion de personal medico", "Recomendacion de otra persona", "Otro"]);
     const evaluation_schedules = ref([]);
     const candidate = ref({ id: null, first_name: "", middle_name: "", last_name: "", birth_date: null, age: null, chronological_age: null, diagnosis: "", info_channel: infoChannels.value[infoChannels.value.length - 1], sheet: 1 });
     const contacts = ref([]);
     const medications = ref([]);
     const evaluators = ref([]);
-    const evaluation_schedule = ref({ evaluator_id: null, date: DateTime.now().toFormat("yyyy-MM-dd H:mm:s") });
+    const evaluation_schedule = ref({ evaluator_id: null, date: DateTime.now().toFormat("yyyy-MM-dd HH:mm:ss") });
     const picture = ref(null);
     const recepient = ref({ name: "", phone: "" });
     const age = computed(() => {
@@ -1283,7 +1299,7 @@ const _sfc_main = {
       return openBlock(), createBlock(QPage, null, {
         default: withCtx(() => [
           createBaseVNode("div", _hoisted_1, [
-            _cache[17] || (_cache[17] = createBaseVNode("div", { class: "page-title" }, "Datos del Candidato", -1)),
+            _cache[20] || (_cache[20] = createBaseVNode("div", { class: "page-title" }, "Datos del Candidato", -1)),
             createBaseVNode("div", _hoisted_2, [
               createBaseVNode("div", _hoisted_3, [
                 createVNode(QInput, {
@@ -1301,23 +1317,23 @@ const _sfc_main = {
                   outlined: "",
                   "stack-label": "",
                   "hide-bottom-space": "",
-                  label: "Apellido Materno",
-                  modelValue: candidate.value.middle_name,
-                  "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => candidate.value.middle_name = $event),
+                  label: "Apellido Paterno",
+                  modelValue: candidate.value.last_name,
+                  "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => candidate.value.last_name = $event),
                   class: "q-field--required",
-                  error: !!errors.value["candidate.middle_name"],
-                  "error-message": errors.value["candidate.middle_name"]
+                  error: !!errors.value["candidate.last_name"],
+                  "error-message": errors.value["candidate.last_name"]
                 }, null, 8, ["modelValue", "error", "error-message"]),
                 createVNode(QInput, {
                   outlined: "",
                   "stack-label": "",
                   "hide-bottom-space": "",
-                  label: "Apellido Paterno",
-                  modelValue: candidate.value.last_name,
-                  "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => candidate.value.last_name = $event),
+                  label: "Apellido Materno",
+                  modelValue: candidate.value.middle_name,
+                  "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => candidate.value.middle_name = $event),
                   class: "q-field--required",
-                  error: !!errors.value["candidate.last_name"],
-                  "error-message": errors.value["candidate.last_name"]
+                  error: !!errors.value["candidate.middle_name"],
+                  "error-message": errors.value["candidate.middle_name"]
                 }, null, 8, ["modelValue", "error", "error-message"])
               ]),
               createBaseVNode("div", _hoisted_4, [
@@ -1361,7 +1377,7 @@ const _sfc_main = {
             errors: errors.value
           }, null, 8, ["candidateId", "errors"]),
           createBaseVNode("div", _hoisted_5, [
-            _cache[18] || (_cache[18] = createBaseVNode("div", { class: "page-title" }, "¿Dónde obtuvo la información del Instituto?", -1)),
+            _cache[21] || (_cache[21] = createBaseVNode("div", { class: "page-title" }, "¿Dónde obtuvo la información del Instituto?", -1)),
             createBaseVNode("div", _hoisted_6, [
               createBaseVNode("div", _hoisted_7, [
                 createBaseVNode("div", _hoisted_8, [
@@ -1379,7 +1395,7 @@ const _sfc_main = {
             ])
           ]),
           createBaseVNode("div", _hoisted_9, [
-            _cache[19] || (_cache[19] = createBaseVNode("div", { class: "page-title" }, "Información Médica del Candidato", -1)),
+            _cache[22] || (_cache[22] = createBaseVNode("div", { class: "page-title" }, "Información Médica del Candidato", -1)),
             createVNode(QInput, {
               type: "textarea",
               outlined: "",
@@ -1399,7 +1415,7 @@ const _sfc_main = {
             errors: errors.value
           }, null, 8, ["modelValue", "candidateId", "errors"]),
           createBaseVNode("div", _hoisted_10, [
-            _cache[20] || (_cache[20] = createBaseVNode("div", { class: "page-title" }, "Programar Evaluación", -1)),
+            _cache[23] || (_cache[23] = createBaseVNode("div", { class: "page-title" }, "Programar Evaluación", -1)),
             createBaseVNode("div", _hoisted_11, [
               createBaseVNode("div", _hoisted_12, [
                 createVNode(QSelect, {
@@ -1421,96 +1437,198 @@ const _sfc_main = {
                 createVNode(QInput, {
                   outlined: "",
                   "stack-label": "",
-                  label: "Fecha de evaluación",
-                  modelValue: evaluation_schedule.value.date,
-                  "onUpdate:modelValue": _cache[11] || (_cache[11] = ($event) => evaluation_schedule.value.date = $event),
-                  mask: "####-##-## ##:##:00"
-                }, null, 8, ["modelValue"])
+                  modelValue: evaluationDate.value,
+                  "onUpdate:modelValue": _cache[12] || (_cache[12] = ($event) => evaluationDate.value = $event),
+                  class: "q-field--required",
+                  label: "Seleccione fecha"
+                }, {
+                  append: withCtx(() => [
+                    createVNode(QIcon, {
+                      name: "event",
+                      class: "cursor-pointer"
+                    }, {
+                      default: withCtx(() => [
+                        createVNode(QPopupProxy, {
+                          cover: "",
+                          "transition-show": "scale",
+                          "transition-hide": "scale"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode(QDate, {
+                              modelValue: evaluationDate.value,
+                              "onUpdate:modelValue": _cache[11] || (_cache[11] = ($event) => evaluationDate.value = $event),
+                              mask: "DD/MM/YYYY"
+                            }, {
+                              default: withCtx(() => [
+                                createBaseVNode("div", _hoisted_14, [
+                                  withDirectives(createVNode(QBtn, {
+                                    label: "Cerrar",
+                                    color: "primary",
+                                    flat: ""
+                                  }, null, 512), [
+                                    [ClosePopup]
+                                  ])
+                                ])
+                              ]),
+                              _: 1
+                            }, 8, ["modelValue"])
+                          ]),
+                          _: 1
+                        })
+                      ]),
+                      _: 1
+                    })
+                  ]),
+                  _: 1
+                }, 8, ["modelValue"])
+              ]),
+              createBaseVNode("div", _hoisted_15, [
+                createVNode(QInput, {
+                  outlined: "",
+                  "stack-label": "",
+                  modelValue: evaluationTime.value,
+                  "onUpdate:modelValue": _cache[14] || (_cache[14] = ($event) => evaluationTime.value = $event),
+                  class: "q-field--required",
+                  label: "Horario"
+                }, {
+                  append: withCtx(() => [
+                    createVNode(QIcon, {
+                      name: "access_time",
+                      class: "cursor-pointer"
+                    }, {
+                      default: withCtx(() => [
+                        createVNode(QPopupProxy, {
+                          cover: "",
+                          "transition-show": "scale",
+                          "transition-hide": "scale"
+                        }, {
+                          default: withCtx(() => [
+                            createVNode(QTime, {
+                              modelValue: evaluationTime.value,
+                              "onUpdate:modelValue": _cache[13] || (_cache[13] = ($event) => evaluationTime.value = $event)
+                            }, {
+                              default: withCtx(() => [
+                                createBaseVNode("div", _hoisted_16, [
+                                  withDirectives(createVNode(QBtn, {
+                                    label: "Cerrar",
+                                    color: "primary",
+                                    flat: ""
+                                  }, null, 512), [
+                                    [ClosePopup]
+                                  ])
+                                ])
+                              ]),
+                              _: 1
+                            }, 8, ["modelValue"])
+                          ]),
+                          _: 1
+                        })
+                      ]),
+                      _: 1
+                    })
+                  ]),
+                  _: 1
+                }, 8, ["modelValue"])
               ])
             ]),
-            _cache[21] || (_cache[21] = createBaseVNode("div", { class: "subtitle" }, "Historial de Evaluaciones Re-programadas", -1)),
-            createBaseVNode("ul", _hoisted_14, [
+            _cache[24] || (_cache[24] = createBaseVNode("div", { class: "subtitle" }, "Historial de Evaluaciones Re-programadas", -1)),
+            createBaseVNode("ul", _hoisted_17, [
               (openBlock(true), createElementBlock(Fragment, null, renderList(evaluation_schedules.value, (schedule) => {
                 return openBlock(), createElementBlock("li", {
                   class: "q-py-md",
                   key: schedule.id
                 }, [
-                  createBaseVNode("span", _hoisted_15, toDisplayString(schedule.date), 1),
-                  createBaseVNode("span", _hoisted_16, toDisplayString(schedule.evaluator.name), 1)
+                  createBaseVNode("span", _hoisted_18, toDisplayString(schedule.date), 1),
+                  createBaseVNode("span", _hoisted_19, toDisplayString(schedule.evaluator.name), 1)
                 ]);
               }), 128))
             ])
           ]),
-          createBaseVNode("div", _hoisted_17, [
-            _cache[24] || (_cache[24] = createBaseVNode("div", { class: "page-title" }, "Herramientas Adicionales", -1)),
-            _cache[25] || (_cache[25] = createBaseVNode("div", { class: "subtitle" }, "Envio de Formato Inicial por WhatsApp", -1)),
-            createBaseVNode("div", _hoisted_18, [
+          createBaseVNode("div", _hoisted_20, [
+            _cache[27] || (_cache[27] = createBaseVNode("div", { class: "page-title" }, "Herramientas Adicionales", -1)),
+            _cache[28] || (_cache[28] = createBaseVNode("div", { class: "subtitle q-my-md" }, "Envio de Formato Inicial por WhatsApp", -1)),
+            createBaseVNode("div", _hoisted_21, [
               createVNode(QInput, {
                 outlined: "",
                 "stack-label": "",
                 label: "Nombre de la persona",
                 type: "text",
                 modelValue: recepient.value.name,
-                "onUpdate:modelValue": _cache[12] || (_cache[12] = ($event) => recepient.value.name = $event)
+                "onUpdate:modelValue": _cache[15] || (_cache[15] = ($event) => recepient.value.name = $event)
               }, null, 8, ["modelValue"]),
               createVNode(QInput, {
                 outlined: "",
                 "stack-label": "",
                 label: "Celular",
                 type: "tel",
+                mask: "##########",
                 modelValue: recepient.value.phone,
-                "onUpdate:modelValue": _cache[13] || (_cache[13] = ($event) => recepient.value.phone = $event)
+                "onUpdate:modelValue": _cache[16] || (_cache[16] = ($event) => recepient.value.phone = $event)
               }, null, 8, ["modelValue"]),
               createVNode(QBtn, {
                 style: { "width": "100px", "height": "48px", "align-self": "flex-end" },
                 color: "primary"
               }, {
-                default: withCtx(() => _cache[22] || (_cache[22] = [
+                default: withCtx(() => _cache[25] || (_cache[25] = [
                   createTextVNode("Enviar")
                 ])),
                 _: 1
               })
             ]),
-            _cache[26] || (_cache[26] = createBaseVNode("div", { class: "subtitle q-mt-md" }, "Envio de Encuesta de Satisfaccion", -1)),
-            createBaseVNode("div", _hoisted_19, [
+            _cache[29] || (_cache[29] = createBaseVNode("div", { class: "subtitle q-my-md" }, "Envio de Encuesta de Satisfaccion", -1)),
+            createBaseVNode("div", _hoisted_22, [
               createVNode(QInput, {
                 outlined: "",
                 "stack-label": "",
                 label: "Nombre de la persona",
                 type: "text",
                 modelValue: recepient.value.name,
-                "onUpdate:modelValue": _cache[14] || (_cache[14] = ($event) => recepient.value.name = $event)
+                "onUpdate:modelValue": _cache[17] || (_cache[17] = ($event) => recepient.value.name = $event)
               }, null, 8, ["modelValue"]),
               createVNode(QInput, {
                 outlined: "",
                 "stack-label": "",
                 label: "Celular",
                 type: "tel",
-                modelValue: candidate.value.phone,
-                "onUpdate:modelValue": _cache[15] || (_cache[15] = ($event) => candidate.value.phone = $event)
+                mask: "##########",
+                modelValue: recepient.value.phone,
+                "onUpdate:modelValue": _cache[18] || (_cache[18] = ($event) => recepient.value.phone = $event)
               }, null, 8, ["modelValue"]),
               createVNode(QBtn, {
                 style: { "width": "100px", "height": "48px", "align-self": "flex-end" },
                 color: "primary"
               }, {
-                default: withCtx(() => _cache[23] || (_cache[23] = [
+                default: withCtx(() => _cache[26] || (_cache[26] = [
                   createTextVNode("Enviar")
                 ])),
                 _: 1
               })
             ])
           ]),
-          createBaseVNode("div", _hoisted_20, [
-            _cache[27] || (_cache[27] = createBaseVNode("div", { class: "subtitle" }, "Foto del candidato", -1)),
-            createBaseVNode("div", _hoisted_21, [
-              createBaseVNode("div", _hoisted_22, [
+          createBaseVNode("div", _hoisted_23, [
+            _cache[30] || (_cache[30] = createBaseVNode("div", { class: "subtitle q-mb-md" }, "Foto del candidato", -1)),
+            createBaseVNode("div", _hoisted_24, [
+              candidate.value.picture ? (openBlock(), createBlock(QAvatar, {
+                key: 0,
+                size: "64px",
+                rounded: "",
+                class: "q-mr-sm"
+              }, {
+                default: withCtx(() => [
+                  createVNode(QImg, {
+                    src: candidate.value.picture
+                  }, null, 8, ["src"])
+                ]),
+                _: 1
+              })) : createCommentVNode("", true),
+              createBaseVNode("div", _hoisted_25, [
                 createVNode(QFile, {
                   outlined: "",
                   "stack-label": "",
                   label: "Adjuntar archivo",
                   icon: "attach",
                   modelValue: picture.value,
-                  "onUpdate:modelValue": _cache[16] || (_cache[16] = ($event) => picture.value = $event)
+                  "onUpdate:modelValue": _cache[19] || (_cache[19] = ($event) => picture.value = $event)
                 }, {
                   append: withCtx(() => [
                     createVNode(QIcon, { name: "attachment" })
@@ -1520,13 +1638,13 @@ const _sfc_main = {
               ])
             ])
           ]),
-          createBaseVNode("div", _hoisted_23, [
+          createBaseVNode("div", _hoisted_26, [
             createVNode(QBtn, {
               loading: loading.value,
               color: "primary",
               onClick: storeCandidate
             }, {
-              default: withCtx(() => _cache[28] || (_cache[28] = [
+              default: withCtx(() => _cache[31] || (_cache[31] = [
                 createTextVNode(" Guardar ")
               ])),
               _: 1

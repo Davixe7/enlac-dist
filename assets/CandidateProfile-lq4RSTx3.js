@@ -1,9 +1,9 @@
-import { Q as QImg } from "./QImg-DcCHZXx5.js";
-import { Q as QInput } from "./QCheckbox-IpF3v89G.js";
-import { i as QSelect } from "./QList-CZRjyixm.js";
-import { Q as QRadio } from "./QRadio-USJqshDE.js";
-import { _ as defineStore, b as onMounted, r as ref, e as createElementBlock, i as openBlock, k as createVNode, j as createBaseVNode, u as unref, m as createTextVNode, a9 as toDisplayString } from "./index-DFLanZ1z.js";
-import { api } from "./axios-CONCEpaH.js";
+import { Q as QImg } from "./QImg-BJgnFL-C.js";
+import { Q as QInput } from "./QCheckbox-BxmFaGde.js";
+import { i as QSelect } from "./QList-B3AEJr1g.js";
+import { Q as QRadio } from "./QRadio-CpZLYscZ.js";
+import { _ as defineStore, b as onMounted, r as ref, e as createElementBlock, i as openBlock, k as createVNode, j as createBaseVNode, u as unref, m as createTextVNode, a9 as toDisplayString } from "./index-CAST7tag.js";
+import { api } from "./axios-9xnSQELn.js";
 const useCandidateStore = defineStore("candidate", {
   state: () => ({
     id: null,
@@ -56,20 +56,12 @@ const _sfc_main = {
     const errors = ref({});
     const relationships = [
       { label: "Abuelo(a)", value: "abuelo" },
-      { label: "Cuñado(a)", value: "cunado" },
-      { label: "Esposo(a)", value: "esposo" },
       { label: "Hermano(a)", value: "hermano" },
-      { label: "Hijo(a)", value: "hijo" },
       { label: "Hermanastro(a)", value: "hermanastro" },
       { label: "Madre/Padre", value: "madre_padre" },
-      { label: "Nieto(a)", value: "nieto" },
       { label: "Padrastro/Madrastra", value: "padrastro_madrastra" },
-      { label: "Pareja", value: "pareja" },
       { label: "Primo(a)", value: "primo" },
-      { label: "Sobrino(a)", value: "sobrino" },
-      { label: "Suegro(a)", value: "suegro" },
-      { label: "Tío(a)", value: "tio" },
-      { label: "Yerno/Nuera", value: "yerno_nuera" }
+      { label: "Tío(a)", value: "tio" }
     ];
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1, [
@@ -122,7 +114,8 @@ const _sfc_main = {
               error: !!errors.value.relationship,
               "error-message": errors.value.relationship,
               options: relationships,
-              "emit-value": ""
+              "emit-value": "",
+              "map-options": ""
             }, null, 8, ["modelValue", "error", "error-message"])
           ]),
           createBaseVNode("div", _hoisted_4, [

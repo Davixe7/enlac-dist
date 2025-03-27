@@ -1,5 +1,5 @@
-import { c as createComponent, q as computed, h, d as hSlot, g as getCurrentInstance } from "./index-DFLanZ1z.js";
-import { u as useDarkProps, a as useDark } from "./use-dark-CgBzdHOB.js";
+import { c as createComponent, q as computed, h, d as hSlot, g as getCurrentInstance } from "./index-CAST7tag.js";
+import { u as useDarkProps, a as useDark } from "./use-dark-DrYRdNo-.js";
 const QCardSection = createComponent({
   name: "QCardSection",
   props: {

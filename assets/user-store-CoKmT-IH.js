@@ -1,5 +1,5 @@
-import { _ as defineStore } from "./index-DFLanZ1z.js";
-import { api } from "./axios-CONCEpaH.js";
+import { _ as defineStore } from "./index-CAST7tag.js";
+import { api } from "./axios-9xnSQELn.js";
 const useAuthStore = defineStore("auth", {
   state: () => {
     let url = new URL(api.defaults.baseURL).origin;
