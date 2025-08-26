@@ -1,0 +1,14 @@
+
+.q-table td {
+  vertical-align: middle;
+}
+.q-table td:nth-child(5) {
+  font-size: 14px;
+  width: 185px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.q-table tr:nth-child(even) {
+  background-color: #f3f4f6;
+  /* Color de fondo para filas pares */
+}

@@ -1,0 +1,60 @@
+
+.q-list--dense .q-item {
+  min-height: 0;
+  padding-left: 2px;
+  margin-bottom: 24px;
+}
+.q-item__section--side {
+  padding: 0;
+}
+.q-item__section--main {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+}
+.q-item__section--side .q-checkbox {
+  margin-left: -10px;
+  padding-right: 0;
+}
+.q-checkbox__inner {
+  font-size: 32px;
+}
+.q-checkbox__bg {
+  border: 1px solid #4b5563;
+}
+.btn-rank {
+  color: #001f6d;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 16px;
+  border-radius: 8px;
+  background: #e5e7eb;
+  flex: 1 1 auto;
+  margin: 0 10px 10px 0;
+  cursor: pointer;
+}
+.btn-rank--active {
+  background: #001f6d;
+  color: #e5e7eb;
+}
+.btn-rank:last-child {
+  margin-right: 0;
+}
+.label-alt {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.label-alt-2 {
+  color: #111827;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.editorContainer {
+  position: sticky;
+  top: 144px;
+  height: calc(100vh - 144px);
+}
