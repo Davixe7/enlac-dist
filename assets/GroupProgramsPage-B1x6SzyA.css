@@ -1,0 +1,27 @@
+:root {
+  --grey-50: #f3f4f6;
+  --grey-100: #f4f5f7;
+  --grey-200: #e5e7eb;
+  --grey-300: #d1d5db;
+  --grey-400: #9ca3af;
+  --grey-500: #6b7280;
+  --grey-600: #4b5563;
+  --grey-700: #374151;
+  --grey-800: #1f2937;
+  --grey-900: #111827;
+  --primary: #001f6d;
+}
+.row.bordered {
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+}
+.row.bordered > div {
+  border-right: 1px solid var(--primary);
+  padding: 1rem;
+}
+.row.bordered > div:last-child {
+  border-right: none;
+}
+.table-btn-group i {
+  margin: 0 !important;
+}
