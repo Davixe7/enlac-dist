@@ -1,0 +1,42 @@
+
+th {
+  text-align: left;
+  font-weight: 400;
+}
+/* .q-field--outlined .q-field__control:before {
+  
+} */
+
+.q-toolbar__title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1em;
+  letter-spacing: 0;
+  overflow: visible;
+  padding: 0;
+  flex: initial;
+}
+.q-toolbar__title-container {
+  flex: 1 1 auto;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+.q-toolbar__subtitle {
+  font-weight: 500;
+  font-size: 18px;
+}
+.q-item__section--avatar {
+  min-width: fit-content;
+}
+.q-item__section--side {
+  padding-right: 8px;
+}
+.q-item__section--side > .q-icon {
+  font-size: 16px;
+}
+.q-item__section--main {
+  font-size: 14px;
+}
