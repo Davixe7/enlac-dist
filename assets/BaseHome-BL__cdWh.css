@@ -1,0 +1,22 @@
+
+.row.q-col-gutter-xl {
+  margin-left: -36px;
+  margin-top: -36px;
+}
+.q-col-gutter-xl>* {
+  padding-left: 36px;
+  padding-top: 36px;
+}
+.module-card {
+  text-align: center;
+  border-radius: 8px;
+}
+.module-card .q-img {
+  margin-bottom: 8px;
+}
+.module-card a {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
