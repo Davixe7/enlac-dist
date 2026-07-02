@@ -1,0 +1,33 @@
+
+.countdown-timer[data-v-f0473161] {
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  /* font-family: Arial, sans-serif; */
+}
+.time-block[data-v-f0473161] {
+  display: flex;
+  align-items: flex-end;
+  /* background: #2c3e50; */
+  /* border: 1px solid #000; */
+  color: #2c3e50;
+  padding: 8.5px 5px;
+  border-radius: 5px;
+  min-width: 60px;
+}
+.time-value[data-v-f0473161] {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.time-label[data-v-f0473161] {
+  font-size: 0.8rem;
+  /* text-transform: uppercase; */
+  opacity: 0.8;
+}
+.countdown-expired[data-v-f0473161] {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+}

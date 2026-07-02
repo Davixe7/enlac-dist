@@ -1,0 +1,31 @@
+
+/* Tamaño de fuente de la hora */
+.time-input-large .q-field__native {
+  font-size: 1.6rem !important;
+  font-weight: bold !important;
+  text-align: center;
+}
+
+/* Color verde para Ida */
+.col-ida .q-field__native {
+  color: #2e7d32 !important;
+}
+
+/* Color rojo para Regreso */
+.col-regreso .q-field__native {
+  color: #c62828 !important;
+}
+.comment-card {
+  width: 600px;
+  max-width: 90%;
+}
+.comment-textarea .q-field__native {
+  min-height: 120px;
+  line-height: 1.5rem;
+}
+.subtitle {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #111827;
+}
