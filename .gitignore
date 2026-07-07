@@ -1,6 +1,8 @@
-index.php
+.well-known
+.cpanel.yml
+.ftpquota
 .htaccess
+index.php
 /banner
 /storage
-/.well-known
 /something
