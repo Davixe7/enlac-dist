@@ -1,0 +1,25 @@
+
+.custom-textarea textarea {
+  line-height: 1 !important;
+}
+.field-label {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+/* Elimina el subrayado en todos los estados del enlace dentro de la columna de nombre */
+:deep(a) {
+  text-decoration: none !important;
+}
+
+/* O de forma más específica para la tabla de beneficiarios */
+.q-table td a {
+  text-decoration: none !important;
+  color: primary;
+}
+.q-table td a:hover,
+.q-table td a:visited,
+.q-table td a:focus,
+.q-table td a:active {
+  text-decoration: none !important;
+}

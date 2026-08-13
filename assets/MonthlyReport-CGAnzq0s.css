@@ -1,0 +1,86 @@
+
+.monthly-scores-table[data-v-dccbfaf5] {
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: 100%;
+  display: block;
+}
+.monthly-scores-table td[data-v-dccbfaf5],
+.monthly-scores-table th[data-v-dccbfaf5] {
+  padding: 10px 14px;
+}
+
+/* Columna de Fecha Fija (Sticky) para facilitar la lectura durante el desplazamiento */
+.date-col[data-v-dccbfaf5] {
+  min-width: 150px;
+  white-space: nowrap;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #f5f5f5;
+}
+tbody td.date-col[data-v-dccbfaf5] {
+  background-color: #ffffff;
+}
+.summary-row td.date-col[data-v-dccbfaf5] {
+  background-color: #f5f5f5;
+}
+
+/* Columnas de actividades con ancho mínimo cómodo para evitar compresión */
+.activity-header-col[data-v-dccbfaf5] {
+  min-width: 160px;
+  max-width: 220px;
+  white-space: nowrap;
+}
+.score-container[data-v-dccbfaf5] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gap-2[data-v-dccbfaf5] {
+  gap: 8px;
+}
+
+/* Badges estilizados para semáforo */
+.score-badge[data-v-dccbfaf5] {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.score-value[data-v-dccbfaf5] {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.goal-value[data-v-dccbfaf5] {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Colores de estado con fondo suave (Soft background) */
+.status-green[data-v-dccbfaf5] {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+.status-yellow[data-v-dccbfaf5] {
+  background-color: #fffde7;
+  color: #f57f17;
+}
+.status-red[data-v-dccbfaf5] {
+  background-color: #ffebee;
+  color: #c62828;
+}
+.no-data-badge[data-v-dccbfaf5] {
+  color: #bdbdbd;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.summary-row td[data-v-dccbfaf5] {
+  border-top: 1px solid #e0e0e0;
+}
+.font-mono[data-v-dccbfaf5] {
+  font-family: monospace, sans-serif;
+}
