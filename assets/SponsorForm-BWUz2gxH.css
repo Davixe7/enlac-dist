@@ -1,5 +1,0 @@
-
-[data-v-41bbee10] .q-form.address-form:focus-within label.col-md-6:first-child::after {
-  content: ' *';
-  color: red;
-}
